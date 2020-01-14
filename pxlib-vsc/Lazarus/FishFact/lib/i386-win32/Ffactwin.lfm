@@ -1,0 +1,168 @@
+object Form1: TForm1
+  Left = 600
+  Height = 327
+  Top = 276
+  Width = 500
+  BorderIcons = [biSystemMenu, biMinimize]
+  BorderStyle = bsSingle
+  Caption = 'FISH FACTS'
+  ClientHeight = 327
+  ClientWidth = 500
+  Font.Color = clBlack
+  Font.Height = -11
+  Font.Name = 'MS Sans Serif'
+  OnShow = FormShow
+  ShowHint = True
+  LCLVersion = '1.8.4.0'
+  object Panel1: TPanel
+    Left = 6
+    Height = 217
+    Hint = 'Scroll grid below to see other fish'
+    Top = 8
+    Width = 259
+    ClientHeight = 217
+    ClientWidth = 259
+    ParentShowHint = False
+    ShowHint = True
+    TabOrder = 0
+    object DBLabel1: TDBText
+      Left = 2
+      Height = 21
+      Top = 181
+      Width = 110
+      DataField = 'Common_Name'
+      DataSource = DataSource1
+      Font.Color = clRed
+      Font.Height = -19
+      Font.Name = 'MS Serif'
+      Font.Style = [fsBold, fsItalic]
+      ParentColor = False
+      ParentFont = False
+    end
+    object DBImage1: TDBImage
+      Left = 3
+      Height = 168
+      Hint = 'Scroll grid below to see other fish'
+      Top = 6
+      Width = 248
+      DataField = 'Graphic'
+      DataSource = DataSource1
+    end
+  end
+  object Panel2: TPanel
+    Left = 275
+    Height = 22
+    Top = 8
+    Width = 223
+    ClientHeight = 22
+    ClientWidth = 223
+    TabOrder = 1
+    object Label1: TLabel
+      Left = 5
+      Height = 13
+      Top = 2
+      Width = 56
+      Caption = 'About the'
+      Font.Color = clBlue
+      Font.Height = -11
+      Font.Name = 'MS Sans Serif'
+      Font.Style = [fsBold]
+      ParentColor = False
+      ParentFont = False
+    end
+    object DBLabel2: TDBText
+      Left = 65
+      Height = 13
+      Top = 2
+      Width = 56
+      DataField = 'Common_Name'
+      DataSource = DataSource1
+      Font.Color = clBlue
+      Font.Height = -11
+      Font.Name = 'MS Sans Serif'
+      Font.Style = [fsBold]
+      ParentColor = False
+      ParentFont = False
+    end
+  end
+  object Panel3: TPanel
+    Left = 276
+    Height = 193
+    Top = 32
+    Width = 223
+    BevelOuter = bvLowered
+    ClientHeight = 193
+    ClientWidth = 223
+    TabOrder = 2
+    object DBMemo1: TDBMemo
+      Left = 1
+      Height = 183
+      Top = 0
+      Width = 217
+      BorderStyle = bsNone
+      Color = clSilver
+      DataField = 'Notes'
+      DataSource = DataSource1
+      Font.Color = clBlack
+      Font.Height = -11
+      Font.Name = 'MS Sans Serif'
+      ParentFont = False
+      ScrollBars = ssVertical
+      TabOrder = 0
+    end
+  end
+  object Panel4: TPanel
+    Left = 0
+    Height = 99
+    Top = 228
+    Width = 500
+    Align = alBottom
+    BevelInner = bvRaised
+    BorderStyle = bsSingle
+    ClientHeight = 95
+    ClientWidth = 496
+    ParentShowHint = False
+    ShowHint = True
+    TabOrder = 3
+    object DBGrid1: TDBGrid
+      Left = 10
+      Height = 83
+      Hint = 'Scroll up/down to see other fish!'
+      Top = 6
+      Width = 386
+      Color = clWindow
+      Columns = <>
+      DataSource = DataSource1
+      Font.Color = clWindowText
+      Font.Height = -11
+      Font.Name = 'MS Sans Serif'
+      ParentFont = False
+      TabOrder = 0
+      TitleFont.Color = clBlack
+      TitleFont.Height = -11
+      TitleFont.Name = 'MS Sans Serif'
+    end
+    object BitBtn1: TBitBtn
+      Left = 422
+      Height = 29
+      Hint = 'Close Fish Facts'
+      Top = 18
+      Width = 57
+      Caption = 'E&xit'
+      Kind = bkClose
+      TabOrder = 1
+    end
+  end
+  object DataSource1: TDataSource
+    DataSet = Table1
+    left = 47
+    top = 221
+  end
+  object Table1: TParadox
+    FileName = 'C:\etc\biolife.db'
+    BlobFileName = 'C:\etc\biolife.mb'
+    FieldDefs = <>
+    left = 249
+    top = 221
+  end
+end

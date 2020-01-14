@@ -1,0 +1,36 @@
+object Form1: TForm1
+  Left = 316
+  Height = 472
+  Top = 117
+  Width = 907
+  Caption = 'pxlib.dll'
+  ClientHeight = 472
+  ClientWidth = 907
+  Color = clBtnFace
+  Font.Color = clWindowText
+  Font.Height = -11
+  Font.Name = 'MS Sans Serif'
+  Position = poScreenCenter
+  LCLVersion = '1.8.4.0'
+  object btnTest: TButton
+    Left = 8
+    Height = 25
+    Top = 8
+    Width = 75
+    Caption = 'Test'
+    OnClick = btnTestClick
+    TabOrder = 0
+  end
+  object StringGrid1: TStringGrid
+    Left = 14
+    Height = 419
+    Top = 45
+    Width = 880
+    Anchors = [akTop, akLeft, akRight, akBottom]
+    Options = [goFixedVertLine, goFixedHorzLine, goVertLine, goHorzLine, goRangeSelect, goColSizing, goDblClickAutoSize, goSmoothScroll, goCellEllipsis]
+    TabOrder = 1
+    TitleFont.Color = clWindowText
+    TitleFont.Height = -11
+    TitleFont.Name = 'MS Sans Serif'
+  end
+end

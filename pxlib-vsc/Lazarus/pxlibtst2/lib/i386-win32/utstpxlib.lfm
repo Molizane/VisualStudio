@@ -1,0 +1,69 @@
+object Form1: TForm1
+  Left = 720
+  Height = 360
+  Top = 190
+  Width = 587
+  Caption = 'Form1'
+  ClientHeight = 360
+  ClientWidth = 587
+  OnCreate = FormCreate
+  LCLVersion = '1.8.4.0'
+  object DBNavigator1: TDBNavigator
+    Left = 16
+    Height = 25
+    Top = 8
+    Width = 241
+    BevelOuter = bvNone
+    ChildSizing.EnlargeHorizontal = crsScaleChilds
+    ChildSizing.EnlargeVertical = crsScaleChilds
+    ChildSizing.ShrinkHorizontal = crsScaleChilds
+    ChildSizing.ShrinkVertical = crsScaleChilds
+    ChildSizing.Layout = cclLeftToRightThenTopToBottom
+    ChildSizing.ControlsPerLine = 100
+    ClientHeight = 25
+    ClientWidth = 241
+    DataSource = DataSource1
+    Options = []
+    TabOrder = 0
+  end
+  object DBMemo1: TDBMemo
+    Left = 416
+    Height = 90
+    Top = 11
+    Width = 150
+    DataField = 'Notes'
+    DataSource = DataSource1
+    ReadOnly = True
+    TabOrder = 1
+  end
+  object DBImage1: TDBImage
+    Left = 416
+    Height = 130
+    Top = 112
+    Width = 146
+    DataField = 'Graphic'
+    DataSource = DataSource1
+  end
+  object DBGrid1: TDBGrid
+    Left = 13
+    Height = 268
+    Top = 62
+    Width = 379
+    Color = clWindow
+    Columns = <>
+    DataSource = DataSource1
+    TabOrder = 2
+  end
+  object Paradox1: TParadox
+    FileName = 'C:\etc\biolife.db'
+    BlobFileName = 'C:\etc\biolife.mb'
+    FieldDefs = <>
+    left = 344
+    top = 8
+  end
+  object DataSource1: TDataSource
+    DataSet = Paradox1
+    left = 280
+    top = 8
+  end
+end

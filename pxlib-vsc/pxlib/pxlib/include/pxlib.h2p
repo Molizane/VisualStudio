@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<CONFIG>
+  <PreH2PasTools Count="1">
+    <Tool1 Value="object PreH2PasumconjuntodeferramentascomunsparaexecutarantesH2Pas: TPreH2PasTools&#xD;&#xA;end&#xD;&#xA;"/>
+  </PreH2PasTools>
+  <PostH2PasTools Count="1">
+    <Tool1 Value="object PostH2PasumconjuntodeferramentascomunsparaexecutarapsH2Pas: TPostH2PasTools&#xD;&#xA;end&#xD;&#xA;"/>
+  </PostH2PasTools>
+</CONFIG>
